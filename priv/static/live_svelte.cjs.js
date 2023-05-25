@@ -209,6 +209,7 @@ function getProps(ref) {
   return {
     ...dataAttributeToJson("data-props", ref.el),
     pushEvent: (event, data, callback) => ref.pushEvent(event, data, callback),
+    pushEventTo: (target, event, data, callback) => ref.pushEventTo(target, event, data, callback),
     $$slots: createSlots(dataAttributeToJson("data-slots", ref.el), ref),
     $$scope: {}
   };
